@@ -13,7 +13,7 @@ After that just run in your terminal
 
 mkscreator <file-path.png>
 
-It will ask you the dimensions of your animation, in the example from above, it's gonna be 4x4, you can also specify if you want it to be an animation or a single frame so your particle can select randomly, and then drop a vtf with a vmt ready to be used on source
+It will ask you the dimensions of your animation, in the example from above, it's gonna be 3x3, you can also specify if you want it to be an animation or a single frame so your particle can select randomly, and then drop a vtf with a vmt ready to be used on source
 
 # How does it works
 
@@ -24,5 +24,11 @@ Well, it's boring and a bit forced, but basically the tool attacks a _vulnerabil
 - Generates a sht file which the list of sequences on your final image
 - Run mksheet from the tga files and sht into a single image
 - Return a vtf along a vmt with the basic particle definition, only modify the final path on it
+
+# Notes:
+
+- Make the spritesheet png
+- Doesn't work well with non power of two images
+- Doesn't work well with 2x3 animations or 4x2, it must be the same number of rows and columns
 
 The code it's pretty much awful to read, just a way I do tooling for myself
