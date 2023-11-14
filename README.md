@@ -1,6 +1,11 @@
 # mkscreator
 Use MKSheet in your images to create Animated texture files
 
+# How to install
+```
+npm install -g @gonzalolog/mkscreator
+```
+
 # What's this useful for?
 ![bird_1](https://github.com/gonzalologorg/mkscreator/assets/7375225/3dae837d-8ec2-410f-b41e-c74d508a387f)
 
