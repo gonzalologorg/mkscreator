@@ -1,20 +1,39 @@
 {
-  "name": "mkscreator",
+  "name": "@gonzalolog/mkscreator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Converts spritesheets into animated textures for Source Engine",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "main": "./mkswrite.js",
   "bin": {
-    "mkscreator": "./mkswrite.js"
+    "mkscreator": "mkswrite.js"
   },
-  "author": "",
+  "author": "gonzalolog",
   "license": "ISC",
   "dependencies": {
     "image-size": "^1.0.1",
     "pngjs": "^6.0.0",
     "sharp": "^0.30.6",
     "tga": "^1.0.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzalologorg/mkscreator.git"
+  },
+  "keywords": [
+    "mksheet",
+    "source",
+    "garrysmod",
+    "halflife2",
+    "teamfortress",
+    "counterstrike",
+    "valve",
+    "sourceengine"
+  ],
+  "bugs": {
+    "url": "https://github.com/gonzalologorg/mkscreator/issues"
+  },
+  "homepage": "https://github.com/gonzalologorg/mkscreator#readme"
 }
