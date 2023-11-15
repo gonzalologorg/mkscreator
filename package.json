@@ -1,6 +1,6 @@
 {
   "name": "@gonzalolog/mkscreator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converts spritesheets into animated textures for Source Engine",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
