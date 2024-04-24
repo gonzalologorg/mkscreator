@@ -17,9 +17,13 @@ Install this package globally, in first run it will ask you where is your source
 After that just run in your terminal
 
 mkscreator <file-path.png>
+
 Adding single, will create single sequences to use sequence random operator
+
 mkscreator <file-path.png> single
+
 This one it's the default
+
 mkscreator <file-path.png> loop
 
 It will ask you the dimensions of your animation, in the example from above, it's gonna be 3x3, you can also specify if you want it to be an animation or a single frame so your particle can select randomly, and then drop a vtf with a vmt ready to be used on source
