@@ -11,6 +11,7 @@ if (!fs.existsSync(__dirname + "/config.json")) {
     fs.writeFileSync(__dirname + "/config.json", "");
 }
 const fileContent = fs.readFileSync(__dirname + '/config.json', "utf8");
+console.log(__dirname + '/config.json')
 var config = JSON.parse(fileContent);
 if (!config) {
     config = {};
@@ -44,7 +45,6 @@ function processMKS(mksFile, baseFile){
         });
         pidb.on('close', function(code){
             console.log("Finished converting vtex file");
-            console.log("Deleting temp files");
 
             fs.writeFileSync(filePath + baseFile + ".vmt", '"SpriteCard" {\n' +
             '    "$basetexture" "' + baseFile + '"\n' +
@@ -55,15 +55,18 @@ function processMKS(mksFile, baseFile){
             '    "$vertexalpha" "1"\n' +
             '}');
 
-            fs.unlinkSync(filePath + baseFile + ".mks");
-            fs.unlinkSync(filePath + baseFile + ".sht");
-            fs.unlinkSync(filePath + baseFile + ".tga");
-            for (i = 0; i < frames; i++) {
-                console.log("Deleted temp/frame" + i + ".png")
-                fs.unlinkSync("temp/frame" + i + ".png");
-                fs.unlinkSync("temp/frame" + i + ".tga");
+            if (!process.argv[4] || process.argv[4] != "keep") {
+                console.log("Deleting temp files");
+                fs.unlinkSync(filePath + baseFile + ".mks");
+                fs.unlinkSync(filePath + baseFile + ".sht");
+                fs.unlinkSync(filePath + baseFile + ".tga");
+                for (i = 0; i < frames; i++) {
+                    console.log("Deleted temp/frame" + i + ".png")
+                    fs.unlinkSync("temp/frame" + i + ".png");
+                    fs.unlinkSync("temp/frame" + i + ".tga");
+                }
+                fs.rmSync("temp/", { recursive: true, force: true });
             }
-            fs.rmSync("temp/", { recursive: true, force: true });
 
             rl.close();
         });
